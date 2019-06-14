@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 
 import './App.css';
+import Smurfs from './components/Smurfs';
 import SmurfForm from './components/SmurfForm';
 import SmurfDelete from './components/SmurfDelete';
-import Smurfs from './components/Smurfs';
+import SmurfUpdate from './components/SmurfUpdate';
 import axios from 'axios';
 
 class App extends Component {
@@ -36,6 +37,7 @@ class App extends Component {
 						<NavLink to="/">Home</NavLink>
 						<NavLink to="/smurf-form">Add</NavLink>
 						<NavLink to="/smurf-delete">Delete</NavLink>
+						<NavLink to="/smurf-update">Update</NavLink>
 					</nav>
 
 					<Route
@@ -50,6 +52,10 @@ class App extends Component {
 					<Route
 						path="/smurf-delete"
 						render={() => <SmurfDelete cb={this.fetchSmurfs} />}
+					/>
+					<Route
+						path="/smurf-update"
+						render={() => <SmurfUpdate cb={this.fetchSmurfs} />}
 					/>
 				</div>
 			</Router>
