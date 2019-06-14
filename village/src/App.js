@@ -28,7 +28,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SmurfForm />
+        <SmurfForm cb={this.fetchSmurfs} />
         <Smurfs smurfs={this.state.smurfs} />
       </div>
     );
