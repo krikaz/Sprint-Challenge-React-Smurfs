@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 
 import './App.css';
 import Smurfs from './components/Smurfs';
-// import Smurf from './components/Smurf';
 import SmurfForm from './components/SmurfForm';
 import SmurfDelete from './components/SmurfDelete';
 import SmurfUpdate from './components/SmurfUpdate';
