@@ -10,6 +10,7 @@ import SmurfUpdate from './components/SmurfUpdate';
 import axios from 'axios';
 
 import styled from 'styled-components';
+import SmurfsFiltered from './components/SmurfsFiltered';
 
 const StyledNav = styled.nav`
 	display: flex;
@@ -65,6 +66,15 @@ class App extends Component {
 					<Route path="/smurf-form" render={() => <SmurfForm />} />
 					<Route path="/smurf-delete" render={() => <SmurfDelete />} />
 					<Route path="/smurf-update" render={() => <SmurfUpdate />} />
+					<Route
+						path="/smurf/:id"
+						render={() => (
+							<SmurfsFiltered
+								smurfs={this.state.smurfs}
+								idFiltered={match.params.id}
+							/>
+						)}
+					/>
 				</div>
 			</Router>
 		);
