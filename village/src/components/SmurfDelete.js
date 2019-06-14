@@ -8,8 +8,8 @@ export default class SmurfDelete extends Component {
   }
 
   deleteSmurf = () => {
-    axios.delete(`http://localhost:3333/smurfs/${this.idToDelete.current.value}`)
-      .then(() => this.props.cb);
+    axios.delete(`http://localhost:3333/smurfs/${this.idToDelete.current.value}`);
+      // .then(() => this.props.cb);
   };
 
   render() {

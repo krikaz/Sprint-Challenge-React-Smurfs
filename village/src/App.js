@@ -21,7 +21,12 @@ class App extends Component {
 
 	componentDidMount() {
 		this.fetchSmurfs();
-	}
+  }
+
+  componentDidUpdate() {
+		this.fetchSmurfs();
+  }
+  
 
 	fetchSmurfs = () => {
 		axios
@@ -45,18 +50,9 @@ class App extends Component {
 						path="/"
 						render={() => <Smurfs smurfs={this.state.smurfs} />}
 					/>
-					<Route
-						path="/smurf-form"
-						render={() => <SmurfForm cb={this.fetchSmurfs} />}
-					/>
-					<Route
-						path="/smurf-delete"
-						render={() => <SmurfDelete cb={this.fetchSmurfs} />}
-					/>
-					<Route
-						path="/smurf-update"
-						render={() => <SmurfUpdate cb={this.fetchSmurfs} />}
-					/>
+					<Route path="/smurf-form" render={() => <SmurfForm />} />
+					<Route path="/smurf-delete" render={() => <SmurfDelete />} />
+					<Route path="/smurf-update" render={() => <SmurfUpdate />} />
 				</div>
 			</Router>
 		);

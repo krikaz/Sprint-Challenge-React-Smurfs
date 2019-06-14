@@ -17,8 +17,8 @@ export default class SmurfUpdate extends Component {
       age: this.ageToUpdate.current.value,
       height: this.heightToUpdate.current.value,
     }
-    axios.put(`http://localhost:3333/smurfs/${this.idToUpdate.current.value}`, oldSmurf)
-      .then(() => this.props.cb);
+    axios.put(`http://localhost:3333/smurfs/${this.idToUpdate.current.value}`, oldSmurf);
+      // .then(() => this.props.cb);
   };
 
   render() {
