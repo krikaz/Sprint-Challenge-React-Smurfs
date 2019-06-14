@@ -3,10 +3,23 @@ import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 
 import './App.css';
 import Smurfs from './components/Smurfs';
+import Smurf from './components/Smurf';
 import SmurfForm from './components/SmurfForm';
 import SmurfDelete from './components/SmurfDelete';
 import SmurfUpdate from './components/SmurfUpdate';
 import axios from 'axios';
+
+import styled from 'styled-components';
+
+const StyledNav = styled.nav`
+	display: flex;
+	justify-content: space-evenly;
+
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+
+	font-size: 2rem;
+`;
 
 class App extends Component {
 	constructor(props) {
@@ -21,12 +34,11 @@ class App extends Component {
 
 	componentDidMount() {
 		this.fetchSmurfs();
-  }
+	}
 
-  componentDidUpdate() {
+	componentDidUpdate() {
 		this.fetchSmurfs();
-  }
-  
+	}
 
 	fetchSmurfs = () => {
 		axios
@@ -38,12 +50,12 @@ class App extends Component {
 		return (
 			<Router>
 				<div className="App">
-					<nav>
+					<StyledNav>
 						<NavLink to="/">Home</NavLink>
 						<NavLink to="/smurf-form">Add</NavLink>
 						<NavLink to="/smurf-delete">Delete</NavLink>
 						<NavLink to="/smurf-update">Update</NavLink>
-					</nav>
+					</StyledNav>
 
 					<Route
 						exact
