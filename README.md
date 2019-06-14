@@ -29,9 +29,17 @@ In this challenge, you will create a Single Page Application complete with Clien
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain the differences between `client-side routing` and `server-side routing`.
+
+`client-side routing`. The browser takes care of the routing. All the data is downloaded from the server at once. The route is created with javascript and for example a front end framework like React. Today we are moving to use client side routing.
+`server-side routing`. The server takes care of the routing. The data is downloaded in smaller batches. It can be written in many languages.
+
 - [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+CRUD means create (POST), read (GET), update (PUT), delete (DELETE).
+
 - [ ] Mention three tools we can use to make AJAX requests.
 
+axios, jquery, SuperAgent, native javascript.
 
 ## Project Set Up
 
@@ -53,9 +61,10 @@ Follow these steps to set up and work on your project:
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
 - [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by  merging the branch back into master.
+- [ ] PM then will count the HW as done by merging the branch back into master.
+
 ## Minimum Viable Product
 
 The MVP of this project will be broken up between 2 stages. Follow each step and be sure to use your design/style skills to make this application look professional.
@@ -108,18 +117,18 @@ Add a Router to this application by using React Router.
 ```js
 // output: `A list of all the smurfs in the Smurf DB will be returned`
 [
-  {
-    name: 'Brainy',
-    age: 211,
-    height: '5cm',
-    id: 0
-  },
-  {
-    name: 'Smurfette',
-    age: 122,
-    height: '12cm',
-    id: 1
-  }
+	{
+		name: 'Brainy',
+		age: 211,
+		height: '5cm',
+		id: 0,
+	},
+	{
+		name: 'Smurfette',
+		age: 122,
+		height: '12cm',
+		id: 1,
+	},
 ];
 ```
 
